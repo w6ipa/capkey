@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:capkey-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -262,11 +263,11 @@ F 3 "~" H 2650 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:L78L05_SOT89 U3
+L Regulator_Linear:L78L33_SOT89 U3
 U 1 1 5E3EEBE6
 P 2650 4950
 F 0 "U3" H 2650 5192 50  0000 C CNN
-F 1 "L78L05_SOT89" H 2650 5101 50  0000 C CNN
+F 1 "L78L33_SOT89" H 2650 5101 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-89-3" H 2650 5150 50  0001 C CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 2650 4900 50  0001 C CNN
 	1    2650 4950
