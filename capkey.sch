@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:capkey-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,11 +14,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 3250 2600 0    50   Input ~ 0
+Text GLabel 8150 2600 2    50   Input ~ 0
 tip
 Wire Wire Line
 	3250 2600 3500 2600
-Text GLabel 8150 2600 2    50   Input ~ 0
+Text GLabel 3250 2600 0    50   Input ~ 0
 ring
 Wire Wire Line
 	8150 2600 7900 2600
@@ -114,14 +115,9 @@ Wire Wire Line
 	4350 3800 5250 3800
 Wire Wire Line
 	5700 3800 6000 3800
-Connection ~ 5750 2800
-Wire Wire Line
-	5750 2800 6000 2800
 Wire Wire Line
 	5250 3100 5250 2800
 Connection ~ 5250 2800
-Wire Wire Line
-	5250 2800 5750 2800
 Wire Wire Line
 	5250 3400 5250 3800
 Connection ~ 5250 3800
@@ -174,37 +170,6 @@ Wire Wire Line
 	6450 1850 6450 1950
 Text GLabel 6300 2250 0    50   Input ~ 0
 tip
-$Comp
-L power:GND #PWR04
-U 1 1 5E3F5692
-P 5400 2300
-F 0 "#PWR04" H 5400 2050 50  0001 C CNN
-F 1 "GND" H 5405 2127 50  0000 C CNN
-F 2 "" H 5400 2300 50  0001 C CNN
-F 3 "" H 5400 2300 50  0001 C CNN
-	1    5400 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5400 2150 5400 2300
-Wire Wire Line
-	5000 1950 5000 1850
-Wire Wire Line
-	5000 1850 5100 1850
-Wire Wire Line
-	5750 1850 5700 1850
-Wire Wire Line
-	5750 1850 5750 2800
-Wire Wire Line
-	5000 1850 5000 1400
-Wire Wire Line
-	5000 1400 5250 1400
-Connection ~ 5000 1850
-Wire Wire Line
-	5550 1400 5750 1400
-Wire Wire Line
-	5750 1400 5750 1850
-Connection ~ 5750 1850
 Wire Wire Line
 	6450 1950 6850 1950
 Wire Wire Line
@@ -213,9 +178,6 @@ Text GLabel 6350 2150 0    50   Input ~ 0
 ring
 Wire Wire Line
 	6300 2250 6850 2250
-Wire Wire Line
-	5000 1850 4850 1850
-Connection ~ 3900 1950
 Wire Wire Line
 	3900 1950 4450 1950
 $Comp
@@ -260,39 +222,6 @@ F 1 "MountingHole" H 1650 1705 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 1550 1750 50  0001 C CNN
 F 3 "~" H 1550 1750 50  0001 C CNN
 	1    1550 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open JP1
-U 1 1 5E3FF1E1
-P 5400 1400
-F 0 "JP1" H 5400 1605 50  0000 C CNN
-F 1 "SolderJumper_2_Open" H 5400 1514 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5400 1400 50  0001 C CNN
-F 3 "~" H 5400 1400 50  0001 C CNN
-	1    5400 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:L78L05_SOT89 U3
-U 1 1 5E3EEBE6
-P 5400 1850
-F 0 "U3" H 5400 2092 50  0000 C CNN
-F 1 "L78L05_SOT89" H 5400 2001 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5400 2050 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 5400 1800 50  0001 C CNN
-	1    5400 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Battery_Cell BT1
-U 1 1 5E3CC0F6
-P 3900 2150
-F 0 "BT1" H 4018 2246 50  0000 L CNN
-F 1 "Battery_Cell" H 4018 2155 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_103_1x20mm" V 3900 2210 50  0001 C CNN
-F 3 "~" V 3900 2210 50  0001 C CNN
-	1    3900 2150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -362,22 +291,22 @@ F 3 "~" H 4900 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_NMOS_DGS Q2
+L Device:Q_NMOS_GSD Q2
 U 1 1 5E336CA0
 P 7800 3150
 F 0 "Q2" H 8006 3196 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 8006 3105 50  0000 L CNN
+F 1 "IRFML8244TRPbF" H 8006 3105 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8000 3250 50  0001 C CNN
 F 3 "~" H 7800 3150 50  0001 C CNN
 	1    7800 3150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_NMOS_DGS Q1
+L Device:Q_NMOS_GSD Q1
 U 1 1 5E3343FB
 P 3600 3150
 F 0 "Q1" H 3806 3196 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 3806 3105 50  0000 L CNN
+F 1 "IRFML8244TRPbF" H 3806 3105 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3800 3250 50  0001 C CNN
 F 3 "~" H 3600 3150 50  0001 C CNN
 	1    3600 3150
@@ -426,5 +355,37 @@ F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 4900 4550 50  0001 C CNN
 F 3 "~" H 4900 4550 50  0001 C CNN
 	1    4900 4550
 	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 2800 5650 2800
+Wire Wire Line
+	4850 1850 5650 1850
+Wire Wire Line
+	5650 1850 5650 2800
+Connection ~ 5650 2800
+Wire Wire Line
+	5650 2800 6000 2800
+$Comp
+L w6ipa_graphic:dahu-logo LOGO1
+U 1 1 5E3CD739
+P 7450 6800
+F 0 "LOGO1" H 7475 6846 50  0000 L CNN
+F 1 "dahu-logo" H 7475 6755 50  0000 L CNN
+F 2 "w6ipa-footprints:W6IPA-Logo-9mmx8mm" H 7450 6900 50  0001 C CNN
+F 3 "" H 7450 6900 50  0001 C CNN
+	1    7450 6800
+	1    0    0    -1  
+$EndComp
+Connection ~ 3900 1950
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5E3CC0F6
+P 3900 2150
+F 0 "BT1" H 4018 2246 50  0000 L CNN
+F 1 "Battery_Cell" H 4018 2155 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_103_1x20mm" V 3900 2210 50  0001 C CNN
+F 3 "~" V 3900 2210 50  0001 C CNN
+	1    3900 2150
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

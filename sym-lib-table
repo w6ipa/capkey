@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name w6ipa_Connector)(type Legacy)(uri ${KIPRJMOD}/lib/w6ipa-symbols/w6ipa_Connector.lib)(options "")(descr ""))
+  (lib (name w6ipa_graphic)(type Legacy)(uri ${KIPRJMOD}/lib/w6ipa-symbols/w6ipa_graphic.lib)(options "")(descr ""))
+)
